@@ -1,4 +1,4 @@
-# lika
+# liqa
 
 A new Flutter project.
 
