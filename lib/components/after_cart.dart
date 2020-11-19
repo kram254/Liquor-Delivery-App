@@ -26,7 +26,7 @@ class ThanksForShopping extends StatelessWidget {
                 ],
               ),
               Text(
-                "LIKA",
+                "TurnUp",
                 style: TextStyle(color: Colors.white),
               )
             ],

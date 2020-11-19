@@ -40,7 +40,7 @@ class _Home2State extends State<Home2> {
                       ),
                     ),
                     Text(
-                      "Pombe",
+                      "TurnUp",
                       style: TextStyle(color: Colors.white),
                     )
                   ],

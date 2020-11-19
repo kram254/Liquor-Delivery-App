@@ -27,7 +27,7 @@ class SingleProduct extends StatelessWidget {
                 ),
               ),
               Text(
-                "LIKA",
+                "TurnUp",
                 style: TextStyle(color: Colors.white),
               )
             ],

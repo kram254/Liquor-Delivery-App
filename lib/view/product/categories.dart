@@ -42,7 +42,7 @@ class _CategoriesState extends State<Categories> {
                 ),
               ),
               Text(
-                "LIKA",
+                "TurnUp",
                 style: TextStyle(color: Colors.white),
               )
             ],

@@ -32,7 +32,7 @@ class _CheckoutState extends State<Checkout> {
                 ),
               ),
               Text(
-                "LIKA",
+                "TurnUp",
                 style: TextStyle(color: Colors.white),
               )
             ],
