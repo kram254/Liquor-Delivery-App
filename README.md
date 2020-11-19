@@ -1,6 +1,6 @@
-# liqa
+# TurnUp
 
-A new Flutter project.
+Liquor delivery app in Flutter project.
 
 ## Getting Started
 
