@@ -1,34 +1,34 @@
 {
   "project_info": {
-    "project_number": "704609063233",
-    "firebase_url": "https://vmlika.firebaseio.com",
-    "project_id": "vmlika",
-    "storage_bucket": "vmlika.appspot.com"
+    "project_number": "715879106499",
+    "firebase_url": "https://liqour-delivery-52a94.firebaseio.com",
+    "project_id": "liqour-delivery-52a94",
+    "storage_bucket": "liqour-delivery-52a94.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:704609063233:android:3377068250fd71010591c0",
+        "mobilesdk_app_id": "1:715879106499:android:2a667e13f20d1646771f76",
         "android_client_info": {
           "package_name": "com.vansoundz.lika"
         }
       },
       "oauth_client": [
         {
-          "client_id": "704609063233-3enie3ilmltg538pbc35p091q2r2hhtf.apps.googleusercontent.com",
+          "client_id": "715879106499-ck729psliqhi3m7a6ts93nikh2hiese2.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCjE2Zsq4H8CblCchjsK9YFNRXisArRRD0"
+          "current_key": "AIzaSyAAijKBwYyz2p14DiNRJS8G4_-GX5AQ1TU"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "704609063233-3enie3ilmltg538pbc35p091q2r2hhtf.apps.googleusercontent.com",
+              "client_id": "715879106499-ck729psliqhi3m7a6ts93nikh2hiese2.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

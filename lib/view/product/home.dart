@@ -34,12 +34,12 @@ class _HomeState extends State<Home> {
               Container(
                 child: Image.asset(
                   'assets/logo/logo.png',
-                  width: 25,
-                  height: 35,
+                  width: 50,
+                  height: 70,
                 ),
               ),
               Text(
-                "LIKA",
+                "TurnUp",
                 style: TextStyle(color: Colors.white),
               )
             ],

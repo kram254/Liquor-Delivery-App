@@ -58,11 +58,12 @@ class SingleProduct extends StatelessWidget {
             clipper: SClipper(),
             child: Container(
               decoration: BoxDecoration(
-                gradient: LinearGradient(
+                /***gradient: LinearGradient(
                   begin: Alignment.topLeft,
                   end: Alignment.bottomRight,
                   colors: [orange, accentTransparent],
                 ),
+                ***/
               ),
             ),
           ),

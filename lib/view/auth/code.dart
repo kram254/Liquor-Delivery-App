@@ -22,11 +22,12 @@ class _CodeState extends State<Code> {
               clipper: AuthClipper(),
               child: Container(
                 decoration: BoxDecoration(
-                  gradient: LinearGradient(
+                  /***gradient: LinearGradient(
                     begin: Alignment.topLeft,
                     end: Alignment.bottomRight,
                     colors: [accent, orange],
                   ),
+                  ***/
                 ),
               ),
             ),

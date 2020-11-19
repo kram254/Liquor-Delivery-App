@@ -63,12 +63,13 @@ class Cart extends StatelessWidget {
             clipper: SClipper(),
             child: Container(
               decoration: BoxDecoration(
-                gradient: LinearGradient(
+              /*** gradient: LinearGradient(
                   begin: Alignment.topRight,
                   end: Alignment.bottomCenter,
                   colors: [secondary, accentTransparent],
                   stops: [0, 0.6],
                 ),
+                ***/
               ),
             ),
           ),

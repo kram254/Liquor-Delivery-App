@@ -20,11 +20,12 @@ class _AuthState extends State<Auth> {
               clipper: AuthClipper(),
               child: Container(
                 decoration: BoxDecoration(
-                  gradient: LinearGradient(
+              /***  gradient: LinearGradient(
                     begin: Alignment.topLeft,
                     end: Alignment.bottomRight,
-                    colors: [accent, orange],
-                  ),
+                    colors: [Colors.orange],
+                  ), 
+                  ***/
                 ),
               ),
             ),

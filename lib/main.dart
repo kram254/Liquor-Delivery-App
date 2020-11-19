@@ -1,39 +1,32 @@
-import 'dart:async';
-import 'package:firebase_crashlytics/firebase_crashlytics.dart';
+
 import 'package:flutter/material.dart';
-import 'package:lika/models/product_model.dart';
-import 'package:lika/utils/colors.dart';
-import 'package:lika/view/auth/auth.dart';
+//import 'package:lika/models/product_model.dart';  
+import 'package:lika/view/auth/login.dart';
+import 'package:lika/view/auth/user.dart';
+import 'package:lika/view/product/home.dart';
 import 'package:provider/provider.dart';
+import 'package:firebase_core/firebase_core.dart';
 
-void main() {
-  Crashlytics.instance.enableInDevMode = true;
-  // Pass all uncaught errors from the framework to Crashlytics.
-  FlutterError.onError = Crashlytics.instance.recordFlutterError;
-  runZoned<Future<void>>(() async {
-    runApp(
-      MultiProvider(
-        providers: [
-          ChangeNotifierProvider(
-            create: (_) => CProduct(),
+
+
+void main () async {
+  
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+
+  runApp(
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(
+          create: (context) => AuthProvider.initialize(),
+
           ),
-        ],
-        child: App(),
-      ),
-    );
-  }, onError: Crashlytics.instance.recordError);
-}
-
-class App extends StatelessWidget {
-  // This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Liqa',
+      ],
+      child: MaterialApp(
+      title: 'TurnUp',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        backgroundColor: lgrey,
-        platform: TargetPlatform.iOS,
+        backgroundColor: Colors.grey,
         primarySwatch: Colors.brown,
         visualDensity: VisualDensity.adaptivePlatformDensity,
         appBarTheme: AppBarTheme(
@@ -42,19 +35,26 @@ class App extends StatelessWidget {
           ),
         ),
       ),
-      home: Base(),
-    );
-  }
+      home: ScreensController(),
+    )
+      )
+  );
 }
 
-class Base extends StatefulWidget {
-  @override
-  _BaseState createState() => _BaseState();
-}
-
-class _BaseState extends State<Base> {
+class ScreensController extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Auth();
+    final user = Provider.of<AuthProvider>(context);
+    switch (user.status) {
+      // case Status.Uninitialized:
+      //   return Loading();
+      case Status.Unauthenticated:
+      case Status.Authenticating:
+        return LoginScreen();
+      case Status.Authenticated:
+        return Home();
+      default:
+        return LoginScreen();
+    }
   }
 }
