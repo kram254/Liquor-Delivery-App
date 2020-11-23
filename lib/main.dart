@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:lika/models/product_model.dart';
 //import 'package:lika/models/product_model.dart';  
 import 'package:lika/view/auth/login.dart';
 import 'package:lika/view/auth/user.dart';
@@ -10,17 +11,18 @@ import 'package:firebase_core/firebase_core.dart';
 
 
 void main () async {
-  
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
 
   runApp(
     MultiProvider(
       providers: [
-        ChangeNotifierProvider(
-          create: (context) => AuthProvider.initialize(),
-
+        Provider<ChangeNotifier>(
+            create: (_) => CProduct(),
           ),
+        Provider<ChangeNotifier>(
+          create: (_) =>AuthProvider.initialize() ,
+          ) 
       ],
       child: MaterialApp(
       title: 'TurnUp',
@@ -34,7 +36,7 @@ void main () async {
             color: Colors.white,
           ),
         ),
-      ),
+      ), 
       home: ScreensController(),
     )
       )
