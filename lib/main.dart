@@ -17,29 +17,30 @@ void main () async {
   runApp(
     MultiProvider(
       providers: [
-        Provider<ChangeNotifier>(
-            create: (_) => CProduct(),
-          ),
-        Provider<ChangeNotifier>(
-          create: (_) =>AuthProvider.initialize() ,
-          ) 
+        // Use a ChangeNotifierProvider instead of using a provider to serve a change notifier
+        ChangeNotifierProvider(
+          create: (_) => CProduct(),
+        ),
+        ChangeNotifierProvider(
+          create: (_) => AuthProvider.initialize(),
+        )
       ],
       child: MaterialApp(
-      title: 'TurnUp',
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        backgroundColor: Colors.grey,
-        primarySwatch: Colors.brown,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-        appBarTheme: AppBarTheme(
-          iconTheme: IconThemeData(
-            color: Colors.white,
+        title: 'TurnUp',
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+          backgroundColor: Colors.grey,
+          primarySwatch: Colors.brown,
+          visualDensity: VisualDensity.adaptivePlatformDensity,
+          appBarTheme: AppBarTheme(
+            iconTheme: IconThemeData(
+              color: Colors.white,
+            ),
           ),
         ),
-      ), 
-      home: ScreensController(),
-    )
-      )
+        home: ScreensController(),
+      ),
+    ),
   );
 }
 
