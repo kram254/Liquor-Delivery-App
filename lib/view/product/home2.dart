@@ -39,10 +39,7 @@ class _Home2State extends State<Home2> {
                         height: 35,
                       ),
                     ),
-                    Text(
-                      "TurnUp",
-                      style: TextStyle(color: Colors.white),
-                    )
+                    //Text("TurnUp", style: TextStyle(color: Colors.white),)
                   ],
                 ),
               ),

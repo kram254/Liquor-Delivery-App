@@ -9,9 +9,9 @@ class Loading extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          SpinKitWanderingCubes(
-            color: Colors.black,
-            size: 30,
+          SpinKitCubeGrid(
+            color: Colors.green,
+            size: 90,
           )
         ],
         

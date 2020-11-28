@@ -30,8 +30,8 @@ final _key = GlobalKey<ScaffoldState>();
               children: [
                 Image.asset(
                   'assets/logo/logo.png',
-                  width: 50,
-                  height: 70,
+                  width: 250,
+                  height: 250,
                 ),
               ],
             ),
@@ -121,7 +121,7 @@ final _key = GlobalKey<ScaffoldState>();
                     child: Container(
 
                     decoration: BoxDecoration(
-                    color: Colors.red,
+                    color: Colors.green,
                     border: Border.all(color: Colors.grey[400]),
                     borderRadius: BorderRadius.circular(15)
                   ),
